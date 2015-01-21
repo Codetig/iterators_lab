@@ -12,17 +12,27 @@ methods to verify that your code is working.
 Research the following term and summarize your findings on it two to
 three sentences:
 
-* `higher-order function`
+* `higher-order function` - A function that takes another function (or functions) as input and/or returns a function(s) as its output.
 
 
 Update this README with a description of each of the following and an
 example you've created:
 
-* `forEach`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* `map`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* `filter`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-* `reduce`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-* `some`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+* `forEach`: The forEach() method executes a provided function once per array element. E.g NumArr.forEach(function(n){ return n*2;})
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+* `map`: The map() method creates a new array with the results of calling a provided function on every element in this array. E.g var numSquare = numArr.map(function(n){return n*n;})
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+* `filter`: The filter() method creates a new array with all elements that pass the test implemented by the provided function. E.g var greater_than_5 = numArr.filter(function(n){return n > 5;})
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+* `reduce`: The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) has to reduce it to a single value. E.g mult_Number = numArr.reduce(function(a,b){return a * b;})
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+
+* `some`: The some() method tests whether some element in the array passes the test implemented by the provided function.
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+
 * `every`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
 Use the notes provided to help guide you explanation.
@@ -53,8 +63,8 @@ var sqrRoot = function(num) {
 };
 
 
-var sqrNumbers = map(myNumbers, square);
-var absNumbers = map(sqrNumbers, sqrRoot);
+var sqrNumbers = myNumbers.forEach(square);
+var absNumbers = sqrNumbers.map(sqrRoot);
 ```
 
 
