@@ -30,10 +30,11 @@ example you've created:
 * `reduce`: The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) has to reduce it to a single value. E.g mult_Number = numArr.reduce(function(a,b){return a * b;})
 [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
-* `some`: The some() method tests whether some element in the array passes the test implemented by the provided function.
+* `some`: The some() method tests whether some element in the array passes the test implemented by the provided function.E.g Numbers.some(function(n){n>=5;})
 [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
-* `every`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+* `every`: The every() method tests whether all elements in the array pass the test implemented by the provided function. E.g Strings.every(function(n){n === "cheese";})
+[note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
 Use the notes provided to help guide you explanation.
 
@@ -50,7 +51,7 @@ Use the notes provided to help guide you explanation.
 
 Refactor the following code using `map` to make only one call to the `map` function versus the two below.
 
-
+completed
 ```
 var myNumbers = [ -1, 2, -3, 4, -5, 6];
 
@@ -59,11 +60,9 @@ var square = function(num) {
 };
 
 var sqrRoot = function(num) {
-	return Math.sqrt(num);
+	return Math.sqrt(square(num));
 };
 
-
-var sqrNumbers = myNumbers.forEach(square);
 var absNumbers = sqrNumbers.map(sqrRoot);
 ```
 
